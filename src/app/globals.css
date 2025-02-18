@@ -7,6 +7,9 @@
   --foggy-gray: #d1d0bf;
   --cascade: #88a7ab;
   --hoki: #638ba3;
+  --yellow-fluor: #dfff00;
+  --yellow-fluor-lighter: #ffff33;
+  --yellow-fluor-darker: #adff2f;
 
   /* Theme Variables */
   --text-primary: var(--tuatara);
@@ -17,11 +20,7 @@
   --bg-secondary: var(--foggy-gray);
   --bg-accent: var(--cascade);
 
-  --gradient-primary: linear-gradient(
-    90deg,
-    var(--hoki),
-    var(--cascade)
-  );
+  --gradient-primary: linear-gradient(90deg, var(--hoki), var(--cascade));
   --gradient-secondary: linear-gradient(
     90deg,
     var(--foggy-gray),
@@ -38,16 +37,8 @@
   --bg-secondary: #0a0a0a;
   --bg-accent: var(--hoki);
 
-  --gradient-primary: linear-gradient(
-    90deg,
-    var(--hoki),
-    var(--cascade)
-  );
-  --gradient-secondary: linear-gradient(
-    90deg,
-    var(--tuatara),
-    var(--hoki)
-  );
+  --gradient-primary: linear-gradient(90deg, var(--hoki), var(--cascade));
+  --gradient-secondary: linear-gradient(90deg, var(--tuatara), var(--hoki));
 }
 
 /* Utility Classes */
@@ -56,6 +47,32 @@
   background-image: var(--gradient-primary);
 }
 
+.highlight-text {
+  color: var(--yellow-fluor);
+  transition: color 0.3s ease;
+}
+
+.highlight-text:hover {
+  color: var(--yellow-fluor-lighter);
+}
+
+.highlight-bg {
+  background-color: var(--yellow-fluor);
+  transition: background-color 0.3s ease;
+}
+
+.highlight-bg:hover {
+  background-color: var(--yellow-fluor-lighter);
+}
+
+.highlight-glow {
+  text-shadow: 0 0 8px var(--yellow-fluor);
+  transition: text-shadow 0.3s ease;
+}
+
+.highlight-glow:hover {
+  text-shadow: 0 0 12px var(--yellow-fluor-lighter);
+}
 .bg-gradient-primary {
   background-image: var(--gradient-primary);
 }
@@ -66,9 +83,15 @@
 
 /* Animations */
 @keyframes gradient {
-  0% { background-position: 0% 50%; }
-  50% { background-position: 100% 50%; }
-  100% { background-position: 0% 50%; }
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
 }
 
 .animate-gradient {
@@ -77,12 +100,13 @@
 }
 
 @keyframes glow {
-  0%, 100% {
-    @apply opacity-80;
+  0%,
+  100% {
+    opacity: 0.8; /* Use regular CSS */
     filter: blur(8px);
   }
   50% {
-    @apply opacity-100;
+    opacity: 1; /* Use regular CSS */
     filter: blur(4px);
   }
 }

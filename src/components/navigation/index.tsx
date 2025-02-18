@@ -22,24 +22,22 @@ export const Navigation = () => {
   }, []);
 
   return (
-    <nav className="flex justify-between items-center mb-12 bg-white dark:bg-black py-4 border-b border-gray-100 dark:border-gray-800">
+    <nav className="fixed top-0 left-0 right-0 z-[100] flex justify-between items-center mb-12 bg-white/95 dark:bg-black/95 backdrop-blur-md py-4 border-b border-gray-100 dark:border-gray-800">
       {!isMobile && <DesktopNavigation />}
       {isMobile && (
-        <>
+        <div className="flex justify-between items-center w-full px-4">
           <div className="text-2xl font-bold text-black dark:text-white">
             NFT Market
           </div>
-          <div className="fixed top-10 right-4 z-50">
-            <HamburgerButton
-              isOpen={isMobileMenuOpen}
-              onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-            />
-          </div>
+          <HamburgerButton
+            isOpen={isMobileMenuOpen}
+            onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+          />
           <MobileNavigation
             isOpen={isMobileMenuOpen}
             onClose={() => setIsMobileMenuOpen(false)}
           />
-        </>
+        </div>
       )}
     </nav>
   );

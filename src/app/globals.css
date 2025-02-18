@@ -1,0 +1,103 @@
+@import "tailwindcss";
+
+/* 🎨 Color Palette */
+:root {
+  /* Primary Colors */
+  --tuatara: #3a3936;
+  --foggy-gray: #d1d0bf;
+  --cascade: #88a7ab;
+  --hoki: #638ba3;
+
+  /* Theme Variables */
+  --text-primary: var(--tuatara);
+  --text-secondary: var(--hoki);
+  --text-accent: var(--cascade);
+
+  --bg-primary: #ffffff;
+  --bg-secondary: var(--foggy-gray);
+  --bg-accent: var(--cascade);
+
+  --gradient-primary: linear-gradient(
+    90deg,
+    var(--hoki),
+    var(--cascade)
+  );
+  --gradient-secondary: linear-gradient(
+    90deg,
+    var(--foggy-gray),
+    var(--tuatara)
+  );
+}
+
+:root[class="dark"] {
+  --text-primary: var(--foggy-gray);
+  --text-secondary: var(--hoki);
+  --text-accent: var(--cascade);
+
+  --bg-primary: var(--tuatara);
+  --bg-secondary: #0a0a0a;
+  --bg-accent: var(--hoki);
+
+  --gradient-primary: linear-gradient(
+    90deg,
+    var(--hoki),
+    var(--cascade)
+  );
+  --gradient-secondary: linear-gradient(
+    90deg,
+    var(--tuatara),
+    var(--hoki)
+  );
+}
+
+/* Utility Classes */
+.text-gradient {
+  @apply bg-clip-text text-transparent;
+  background-image: var(--gradient-primary);
+}
+
+.bg-gradient-primary {
+  background-image: var(--gradient-primary);
+}
+
+.bg-gradient-secondary {
+  background-image: var(--gradient-secondary);
+}
+
+/* Animations */
+@keyframes gradient {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+.animate-gradient {
+  @apply bg-[length:200%_200%];
+  animation: gradient 8s ease infinite;
+}
+
+@keyframes glow {
+  0%, 100% {
+    @apply opacity-80;
+    filter: blur(8px);
+  }
+  50% {
+    @apply opacity-100;
+    filter: blur(4px);
+  }
+}
+
+.animate-glow {
+  animation: glow 3s ease-in-out infinite;
+}
+
+/* Base Styles */
+html {
+  @apply scroll-smooth;
+}
+
+body {
+  @apply font-sans transition-colors duration-300;
+  color: var(--text-primary);
+  background: var(--bg-primary);
+}

@@ -10,6 +10,7 @@
   --yellow-fluor: #dfff00;
   --yellow-fluor-lighter: #ffff33;
   --yellow-fluor-darker: #adff2f;
+  --pink: #ffe5e5;
 
   /* Theme Variables */
   --text-primary: var(--tuatara);
@@ -39,6 +40,19 @@
 
   --gradient-primary: linear-gradient(90deg, var(--hoki), var(--cascade));
   --gradient-secondary: linear-gradient(90deg, var(--tuatara), var(--hoki));
+}
+
+.text.primary {
+  color: var(--text-primary);
+}
+
+.link {
+  @apply transition-colors duration-200;
+  color: var(--bg-primary);
+}
+
+.link:hover {
+  color: var(--yellow-fluor);
 }
 
 /* Utility Classes */

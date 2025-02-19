@@ -1,7 +1,7 @@
 import React from "react";
 import { navigationLinks } from "./constants";
 import { SearchBar } from "../SearchBar";
-import { Button } from "../buttons/Button";
+import { ButtonSmall } from "../buttons/ButtonSmall";
 
 export const DesktopNavigation = () => {
   return (
@@ -24,9 +24,9 @@ export const DesktopNavigation = () => {
       </div>
       <div className="flex items-center space-x-6">
         <SearchBar className="w-72" />
-        <Button onClick={() => console.log("Connect wallet clicked")}>
+        <ButtonSmall onClick={() => console.log("Connect wallet clicked")}>
           Connect wallet
-        </Button>
+        </ButtonSmall>
       </div>
     </div>
   );

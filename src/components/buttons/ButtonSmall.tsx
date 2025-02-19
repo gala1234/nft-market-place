@@ -8,7 +8,7 @@ interface ButtonProps {
   disabled?: boolean;
 }
 
-export const Button: React.FC<ButtonProps> = ({
+export const ButtonSmall: React.FC<ButtonProps> = ({
   children,
   onClick,
   className = "",
@@ -20,7 +20,7 @@ export const Button: React.FC<ButtonProps> = ({
       type={type}
       onClick={onClick}
       disabled={disabled}
-      className={`px-6 py-2.5 bg-black dark:bg-white text-white dark:text-black rounded-full font-medium hover:opacity-90 transition-opacity disabled:opacity-50 disabled:cursor-not-allowed ${className}`}
+      className={`px-6 py-2.5 bg-black dark:bg-white link rounded-full font-medium hover:opacity-90 transition-opacity disabled:opacity-50 disabled:cursor-not-allowed ${className}`}
     >
       {children}
     </button>

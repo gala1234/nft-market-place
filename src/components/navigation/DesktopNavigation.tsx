@@ -2,6 +2,7 @@ import React from "react";
 import { navigationLinks } from "./constants";
 import { SearchBar } from "../SearchBar";
 import { ButtonSmall } from "../buttons/ButtonSmall";
+import { ThemeToggle } from "../buttons/ThemeToggle";
 
 export const DesktopNavigation = () => {
   return (
@@ -24,6 +25,7 @@ export const DesktopNavigation = () => {
       </div>
       <div className="flex items-center space-x-6">
         <SearchBar className="w-72" />
+        <ThemeToggle />
         <ButtonSmall onClick={() => console.log("Connect wallet clicked")}>
           Connect wallet
         </ButtonSmall>

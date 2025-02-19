@@ -20,7 +20,7 @@ export const ButtonSmall: React.FC<ButtonProps> = ({
       type={type}
       onClick={onClick}
       disabled={disabled}
-      className={`px-6 py-2.5 bg-black dark:bg-white link rounded-full font-medium hover:opacity-90 transition-opacity disabled:opacity-50 disabled:cursor-not-allowed ${className}`}
+      className={`px-6 py-2.5 text-primary bg-secondary rounded-full font-medium duration-200 hover:opacity-70 transition-opacity disabled:opacity-50 disabled:cursor-not-allowed ${className}`}
     >
       {children}
     </button>

@@ -3,6 +3,7 @@ import { navigationLinks } from "./constants";
 import { SearchBar } from "../SearchBar";
 import { ButtonSmall } from "../buttons/ButtonSmall";
 import { HamburgerButton } from "../buttons/HamburgerButton";
+import { ThemeToggle } from "../buttons/ThemeToggle";
 
 interface MobileNavigationProps {
   isOpen: boolean;
@@ -44,6 +45,9 @@ export const MobileNavigation: React.FC<MobileNavigationProps> = ({
             </div>
             <div className="py-3">
               <SearchBar />
+            </div>
+            <div className="py-3 flex justify-start">
+              <ThemeToggle />
             </div>
           </div>
         </div>

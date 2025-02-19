@@ -9,10 +9,19 @@
   --hoki: #638ba3;
   --yellow-fluor: #dfff00;
   --yellow-fluor-lighter: #ffff33;
-  --yellow-fluor-darker: #adff2f;
   --pink: #ffe5e5;
+  --black: #000000;
+  --white: #ffffff;
+
+  /* Transparent Colors */
   --transparent-gray: rgba(128, 128, 128, 0.2);
   --transparent-white: rgba(255, 255, 255, 0.5);
+
+  /* Dark Mode Colors */
+  --dark-tuatara: #222222;
+  --dark-foggy-gray: #444444;
+  --dark-yellow-fluor: #adff2f;
+  --dark-pink: #ffc0cb;
 
   /* Theme Variables */
   --text-primary: var(--tuatara);
@@ -26,8 +35,8 @@
 
   --gradient-primary: linear-gradient(
     90deg,
-    var(--hoki),
-    var(--pink),
+    var(--black),
+    var(--yellow-fluor),
     var(--tuatara)
   );
   --gradient-secondary: linear-gradient(

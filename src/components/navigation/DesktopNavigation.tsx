@@ -5,7 +5,7 @@ import { ButtonSmall } from "../buttons/ButtonSmall";
 
 export const DesktopNavigation = () => {
   return (
-    <div className="flex justify-between w-full">
+    <div className="flex justify-between w-full px-4 ">
       <div className="flex items-center space-x-12">
         <div className="text-2xl font-bold text-black dark:text-white">
           NFT Market

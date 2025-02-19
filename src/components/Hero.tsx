@@ -25,69 +25,82 @@ export const Hero = () => {
     setParticles(newParticles);
   }, []);
 
-  const glowVariants = {
-    initial: { color: "#FFE5E5" },
-    animate: {
-      color: ["#FFE5E5", "#FFFFFF", "#FFE5E5"],
-      transition: {
-        duration: 2.5,
-        repeat: Infinity,
-        ease: "easeInOut",
-      },
-    },
-  };
-
   return (
-    <section className="mb-24">
-      <div className="relative rounded-3xl overflow-hidden bg-gray-50 dark:bg-gray-900 p-12 md:p-16">
-        <div className="relative z-10 max-w-3xl">
-          <div className="relative">
-            {particles.map((particle, index) => (
-              <motion.div
-                key={index}
-                className="absolute w-1 h-1 bg-pink-300/30 rounded-full"
-                initial={{
-                  left: `${particle.initialX}%`,
-                  top: `${particle.initialY}%`,
-                }}
-                animate={{
-                  left: `${particle.targetX}%`,
-                  top: `${particle.targetY}%`,
-                }}
-                transition={{
-                  duration: particle.duration,
-                  repeat: Infinity,
-                  repeatType: "reverse",
-                  ease: "easeInOut",
-                }}
-              />
-            ))}
-            <h1 className="text-5xl md:text-7xl font-bold mb-6 text-black dark:text-white leading-tight">
-              Discover Rare Digital Art and{" "}
-              <motion.span
-                variants={glowVariants}
-                initial="initial"
-                animate="animate"
-                className="text-yellow-500"
-              >
-                Collect NFTs
-              </motion.span>
-            </h1>
-          </div>
-          <p className="text-xl md:text-2xl text-gray-600 dark:text-gray-300 mb-10">
-            The most trusted marketplace for crypto collectibles and
-            non-fungible tokens
-          </p>
-          <div className="flex flex-wrap gap-6">
-            <button className="px-10 py-4 rounded-2xl highlight-bg text-black font-bold text-lg hover:opacity-90 transition-opacity">
-              Start Exploring
-            </button>
-            <button className="px-10 py-4 rounded-2xl bg-black dark:bg-white text-white dark:text-black font-bold text-lg hover:opacity-90 transition-opacity">
-              Create NFT
-            </button>
-          </div>
+    <section className="relative min-h-[80vh] mb-24 overflow-hidden">
+      {/* Particle effect background */}
+      <div className="absolute inset-0 opacity-20">
+        <div className="absolute h-full w-full">
+          {particles.map((particle, index) => (
+            <motion.div
+              key={index}
+              className="absolute h-1 w-1 rounded-full"
+              initial={{
+                x: `${particle.initialX}%`,
+                y: `${particle.initialY}%`,
+                opacity: 0.2,
+                scale: 1,
+              }}
+              animate={{
+                x: `${particle.targetX}%`,
+                y: `${particle.targetY}%`,
+                opacity: [0.2, 0.5, 0.2],
+                scale: [1, 2, 1],
+              }}
+              transition={{
+                duration: particle.duration,
+                repeat: Infinity,
+                ease: "linear",
+              }}
+            />
+          ))}
         </div>
-        <div className="absolute top-0 right-0 w-1/2 h-full bg-gradient-to-l from-yellow-fluor/10 to-transparent opacity-50"></div>
+      </div>
+
+      {/* Main content */}
+      <div className="relative z-10 max-w-[1248px] mx-auto bg-transparent rounded-2xl flex min-h-[80vh] flex-col justify-center p-12 sm:p-16">
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8 }}
+          className="max-w-[800px] bg-foggy-gray backdrop-blur-sm rounded-3xl  space-y-6"
+        >
+          <div className="backdrop-blur-sm">
+            <h1 className="text-5xl md:text-7xl font-bold mb-6 leading-tight text-left">
+              <span
+                className="text-gradient block"
+                style={{
+                  backgroundSize: "200% 200%",
+                  animation: "gradient 15s ease infinite",
+                  backgroundPosition: "left",
+                }}
+              >
+                Discover Rare Digital Art
+              </span>
+              <span
+                className="text-gradient mt-2 block"
+                style={{
+                  backgroundSize: "200% 200%",
+                  animation: "gradient 15s ease infinite",
+                  backgroundPosition: "left",
+                }}
+              >
+                and Collect NFTs
+              </span>
+            </h1>
+            <p className="text-xl md:text-2xl text-gray-600 dark:text-gray-300 mb-10 text-left">
+              The most trusted marketplace for crypto collectibles and
+              non-fungible tokens
+            </p>
+            <div className="flex flex-wrap gap-6">
+              <button className="px-10 py-4 rounded-2xl highlight-bg text-black font-bold text-lg hover:opacity-90 transition-opacity">
+                Start Exploring
+              </button>
+              <button className="px-10 py-4 rounded-2xl bg-black dark:bg-white text-white dark:text-black font-bold text-lg hover:opacity-90 transition-opacity">
+                Create NFT
+              </button>
+            </div>
+          </div>
+        </motion.div>
       </div>
     </section>
   );

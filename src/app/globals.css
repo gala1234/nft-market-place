@@ -4,13 +4,15 @@
 :root {
   /* Primary Colors */
   --tuatara: #3a3936;
-  --foggy-gray: #d1d0bf;
+  --foggy-gray: #d1d0bfff;
   --cascade: #88a7ab;
   --hoki: #638ba3;
   --yellow-fluor: #dfff00;
   --yellow-fluor-lighter: #ffff33;
   --yellow-fluor-darker: #adff2f;
   --pink: #ffe5e5;
+  --transparent-gray: rgba(128, 128, 128, 0.2);
+  --transparent-white: rgba(255, 255, 255, 0.5);
 
   /* Theme Variables */
   --text-primary: var(--tuatara);
@@ -20,8 +22,14 @@
   --bg-primary: #ffffff;
   --bg-secondary: var(--foggy-gray);
   --bg-accent: var(--cascade);
+  --bg-transparent: var(--transparent-gray);
 
-  --gradient-primary: linear-gradient(90deg, var(--hoki), var(--cascade));
+  --gradient-primary: linear-gradient(
+    90deg,
+    var(--hoki),
+    var(--pink),
+    var(--tuatara)
+  );
   --gradient-secondary: linear-gradient(
     90deg,
     var(--foggy-gray),
@@ -35,10 +43,16 @@
   --text-accent: var(--cascade);
 
   --bg-primary: var(--tuatara);
-  --bg-secondary: #0a0a0a;
+  --bg-secondary: #0a0a0aff;
   --bg-accent: var(--hoki);
+  --bg-transparent: var(--transparent-white);
 
-  --gradient-primary: linear-gradient(90deg, var(--hoki), var(--cascade));
+  --gradient-primary: linear-gradient(
+    90deg,
+    var(--hoki),
+    var(--pink),
+    var(--bg-primary)
+  );
   --gradient-secondary: linear-gradient(90deg, var(--tuatara), var(--hoki));
 }
 
@@ -93,6 +107,15 @@
 
 .bg-gradient-secondary {
   background-image: var(--gradient-secondary);
+}
+
+/* Custom Background Classes */
+.bg-secondary {
+  background-color: var(--bg-secondary);
+}
+
+.bg-transparent {
+  background-color: var(--bg-transparent);
 }
 
 /* Animations */

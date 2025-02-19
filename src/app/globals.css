@@ -58,9 +58,9 @@
 
   --gradient-primary: linear-gradient(
     90deg,
-    var(--hoki),
-    var(--pink),
-    var(--bg-primary)
+    var(--white),
+    var(--yellow-fluor),
+    var(--white)
   );
   --gradient-secondary: linear-gradient(90deg, var(--tuatara), var(--hoki));
 }

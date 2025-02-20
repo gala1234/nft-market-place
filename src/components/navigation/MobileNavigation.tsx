@@ -34,6 +34,7 @@ export const MobileNavigation: React.FC<MobileNavigationProps> = ({
               key={link.label}
               href={link.href}
               className="py-3 text-link font-medium"
+              onClick={onClose}
             >
               {link.label}
             </a>
@@ -41,15 +42,23 @@ export const MobileNavigation: React.FC<MobileNavigationProps> = ({
           <div className="my-8">
             <div className="py-3">
               <ButtonSmall
-                onClick={() => console.log("Connect wallet clicked")}
-              >
-                Connect wallet
-              </ButtonSmall>
+                text="Connect wallet"
+                onClick={() => {
+                  console.log("Connect wallet clicked");
+                  onClose();
+                }}
+              />
             </div>
             <div className="py-3">
               <SearchBar />
             </div>
-            <div className="py-3 flex justify-start">
+            <div
+              className="py-3 flex justify-start"
+              onClick={() => {
+                console.log("Connect wallet clicked");
+                onClose();
+              }}
+            >
               <ThemeToggle />
             </div>
           </div>

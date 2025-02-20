@@ -24,9 +24,10 @@ export const DesktopNavigation = () => {
       <div className="flex items-center space-x-6">
         <SearchBar className="w-72" />
         <ThemeToggle />
-        <ButtonSmall onClick={() => console.log("Connect wallet clicked")}>
-          Connect wallet
-        </ButtonSmall>
+        <ButtonSmall
+          text="Connect wallet"
+          onClick={() => console.log("Connect wallet clicked")}
+        />
       </div>
     </div>
   );

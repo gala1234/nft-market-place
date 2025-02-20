@@ -23,7 +23,7 @@ export const SearchBar: React.FC<SearchBarProps> = ({
         type="text"
         placeholder={placeholder}
         onChange={handleSearch}
-        className="w-full px-4 py-2.5 pl-10 rounded-full bg-gray-100 dark:bg-gray-800 text-black dark:text-white placeholder-gray-500 dark:placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-yellow-fluor/50 transition-all"
+        className="w-full px-4 py-2.5 pl-10 rounded-full bg-gray-100 dark:bg-gray-800 text-black dark:text-white placeholder-gray-500 dark:placeholder-gray-400 focus:outline-none focus:ring-2 focus:yellow-fluor transition-all"
       />
       <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
         <svg

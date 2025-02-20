@@ -62,7 +62,7 @@ export const Hero = () => {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
-          className="max-w-[800px] bg-foggy-gray backdrop-blur-sm rounded-3xl  space-y-6"
+          className="max-w-[800px] bg-dark backdrop-blur-sm rounded-3xl  space-y-6"
         >
           <div className="backdrop-blur-sm">
             <h1 className="text-5xl md:text-7xl font-bold mb-6 leading-tight text-left">
@@ -92,10 +92,10 @@ export const Hero = () => {
               non-fungible tokens
             </p>
             <div className="flex flex-wrap gap-6">
-              <button className="px-10 py-4 rounded-2xl highlight-bg text-black font-bold text-lg hover:opacity-90 transition-opacity">
+              <button className="px-10 py-4 rounded-2xl bg-accent text-primary font-bold text-lg">
                 Start Exploring
               </button>
-              <button className="px-10 py-4 rounded-2xl bg-black dark:bg-white text-white dark:text-black font-bold text-lg hover:opacity-90 transition-opacity">
+              <button className="px-10 py-4 rounded-2xl bg-accent text-primary font-bold text-lg">
                 Create NFT
               </button>
             </div>

@@ -7,30 +7,30 @@
   --white: #ffffff;
   --dark: #191922;
   --grey-medium: #767474;
-  --grey: #C1C2C3;
-  --yellow-fluor: #F1FF37;
-  --frambuese: #FF3853;
-  --spring-green: #38FF6D;
-  --pink: #FFC0CB;
+  --grey: #c1c2c3;
+  --yellow-fluor: #f1ff37;
+  --frambuese: #ff3853;
+  --spring-green: #38ff6d;
+  --pink: #ffc0cb;
 
   /* Dark Mode Colors */
-  --gray-dark: #52525B;
-  --dark-yellow-fluor: #CFDE00;
-  --dark-frambuese: #C6717C;
-  --dark-spring-green: #00B22F;
+  --gray-dark: #52525b;
+  --dark-yellow-fluor: #cfde00;
+  --dark-frambuese: #c6717c;
+  --dark-spring-green: #00b22f;
   --dark-pink: #ffc0cb;
 
   /* Light Mode Colors */
-  --grey-light: #E2E4E0
-  --light-yellow-fluor: #F7FF8D;
-  --light-frambuese: #FFE3E6;
-  --light-spring-gree: #E3FFEA;
-  --light-pink: #FFEEF0;
-
+  --grey-light: #e2e4e0;
+  --light-yellow-fluor: #f7ff8d;
+  --light-frambuese: #ffe3e6;
+  --light-spring-green: #e3ffea;
+  --light-pink: #ffeef0;
 
   /* Transparent Colors */
   --transparent-gray: rgba(128, 128, 128, 0.2);
   --transparent-white: rgba(255, 255, 255, 0.5);
+  --transparent-yellow-fluor: rgba(241, 255, 55, 0.5);
 
   /* Theme Variables */
   --text-primary: var(--dark);
@@ -41,17 +41,18 @@
   --bg-secondary: var(--grey-light);
   --bg-accent: var(--light-yellow-fluor);
   --bg-transparent: var(--transparent-gray);
+  --bg-transparent-accent: var(--transparent-yellow-fluor);
 
   --gradient-primary: linear-gradient(
     90deg,
-    var(--black),
+    var(--dark-frambuese),
     var(--yellow-fluor),
-    var(--tuatara)
+    var(--dark-frambuese)
   );
   --gradient-secondary: linear-gradient(
     90deg,
     var(--grey-light),
-    var(--light-spring-gree)
+    var(--light-spring-green)
   );
 }
 
@@ -71,54 +72,58 @@
     var(--yellow-fluor),
     var(--white)
   );
-  --gradient-secondary: linear-gradient(90deg, var(--black), var(--gray-dark));
+  --gradient-secondary: linear-gradient(
+    90deg,
+    var(--black),
+    var(--dark-frambuese)
+  );
 }
 
-.text.primary {
+/* Text Colors */
+.text-primary {
   color: var(--text-primary);
 }
 
-.link {
-  @apply transition-colors duration-200;
-  color: var(--text-primary);
+.text-secondary {
+  color: var(--text-secondary);
 }
 
-.link:hover {
-  color: var(--yellow-fluor);
-}
-
-/* Utility Classes */
-.text-gradient {
-  @apply bg-clip-text text-transparent;
-  background-image: var(--gradient-primary);
-}
-
-.highlight-text {
-  color: var(--yellow-fluor);
+.text-accent {
+  color: var(--text-accent);
   transition: color 0.3s ease;
 }
 
-.highlight-text:hover {
-  color: var(--light-yellow-fluor);
+.text-accent:hover {
+  color: var(--bg-transparent-accent);
 }
 
-.highlight-bg {
-  background-color: var(--yellow-fluor);
-  transition: background-color 0.3s ease;
+.text-link {
+  color: var(--text-primary);
+  transition: color 0.3s ease;
 }
 
-.highlight-bg:hover {
-  background-color: var(--light-yellow-fluor);
+.text-link:hover {
+  color: var(--text-accent);
 }
 
-.highlight-glow {
-  text-shadow: 0 0 8px var(--yellow-fluor);
-  transition: text-shadow 0.3s ease;
+/* Background Colors */
+.bg-primary {
+  background-color: var(--bg-primary);
 }
 
-.highlight-glow:hover {
-  text-shadow: 0 0 12px var(--light-yellow-fluor);
+.bg-secondary {
+  background-color: var(--bg-secondary);
 }
+
+.bg-accent {
+  background-color: var(--bg-accent);
+}
+
+.bg-transparent {
+  background-color: var(--bg-transparent);
+}
+
+/* Gradients */
 .bg-gradient-primary {
   background-image: var(--gradient-primary);
 }
@@ -127,13 +132,10 @@
   background-image: var(--gradient-secondary);
 }
 
-/* Custom Background Classes */
-.bg-secondary {
-  background-color: var(--bg-secondary);
-}
-
-.bg-transparent {
-  background-color: var(--bg-transparent);
+/* Utility Classes */
+.text-gradient {
+  @apply bg-clip-text text-transparent;
+  background-image: var(--gradient-primary);
 }
 
 /* Animations */
@@ -176,7 +178,7 @@ html {
 }
 
 body {
-  @apply font-sans transition-colors duration-300;
+  @apply font-sans;
   color: var(--text-primary);
   background: var(--bg-primary);
 }

@@ -30,6 +30,7 @@
   /* Transparent Colors */
   --transparent-gray: rgba(128, 128, 128, 0.2);
   --transparent-white: rgba(255, 255, 255, 0.5);
+  --transparent-black: rgba(0, 0, 0, 0.5);
   --transparent-yellow-fluor: rgba(241, 255, 55, 0.5);
   --transparent-frambuese: rgba(255, 56, 83, 0.5);
 
@@ -42,6 +43,7 @@
   --bg-secondary: var(--grey-light);
   --bg-accent: var(--light-yellow-fluor);
   --bg-transparent: var(--transparent-gray);
+  --bg-transparent-secondary: var(--transparent-white);
   --bg-transparent-accent: var(--transparent-frambuese);
 
   --gradient-primary: linear-gradient(
@@ -66,6 +68,7 @@
   --bg-secondary: var(--gray-dark);
   --bg-accent: var(--dark-yellow-fluor);
   --bg-transparent: var(--transparent-white);
+  --bg-transparent-secondary: var(--transparent-black);
   --bg-transparent-accent: var(--transparent-yellow-fluor);
 
   --gradient-primary: linear-gradient(
@@ -123,6 +126,14 @@
 
 .bg-transparent {
   background-color: var(--bg-transparent);
+}
+
+.bg-transparent-secondary {
+  background-color: var(--bg-transparent-secondary);
+}
+
+.bg-transparent-accent {
+  background-color: var(--bg-transparent-accent);
 }
 
 /* Gradients */

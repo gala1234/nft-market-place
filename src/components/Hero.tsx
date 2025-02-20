@@ -72,16 +72,16 @@ export const Hero = () => {
       </div>
 
       {/* Main content */}
-      <div className="relative z-10 max-w-[1248px] mx-auto bg-transparent rounded-2xl min-h-[80vh] p-12 sm:p-16">
-        <div className="flex flex-col md:flex-row items-center justify-between gap-8">
+      <div className="relative z-10 max-w-[1248px] mx-auto rounded-2xl min-h-[80vh] p-12 sm:p-16">
+        <div className="flex flex-col md:flex-row items-center justify-between gap-8 bg-transparent-secondary backdrop-blur-xl rounded-3xl ">
           {/* Text content */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
-            className="w-full md:w-1/2 backdrop-blur-3xl rounded-3xl space-y-6 p-6"
+            className="w-full md:w-1/2 space-y-6 p-6"
           >
-            <div className="backdrop-blur-sm">
+            <div className="">
               <h1 className="text-5xl md:text-7xl font-bold mb-6 leading-tight text-left">
                 <span
                   className="text-primary block"

@@ -67,7 +67,7 @@ export const Hero = () => {
           <div className="backdrop-blur-sm">
             <h1 className="text-5xl md:text-7xl font-bold mb-6 leading-tight text-left">
               <span
-                className="text-gradient block"
+                className="text-primary block"
                 style={{
                   backgroundSize: "200% 200%",
                   animation: "gradient 15s ease infinite",
@@ -87,7 +87,7 @@ export const Hero = () => {
                 and Collect NFTs
               </span>
             </h1>
-            <p className="text-xl md:text-2xl text-gray-600 dark:text-gray-300 mb-10 text-left">
+            <p className="text-xl md:text-2xl text-secondary mb-10 text-left">
               The most trusted marketplace for crypto collectibles and
               non-fungible tokens
             </p>
@@ -95,7 +95,7 @@ export const Hero = () => {
               <button className="px-10 py-4 rounded-2xl bg-accent text-primary font-bold text-lg">
                 Start Exploring
               </button>
-              <button className="px-10 py-4 rounded-2xl bg-accent text-primary font-bold text-lg">
+              <button className="px-10 py-4 rounded-2xl bg-primary text-link font-bold text-lg">
                 Create NFT
               </button>
             </div>

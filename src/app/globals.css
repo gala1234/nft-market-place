@@ -31,17 +31,18 @@
   --transparent-gray: rgba(128, 128, 128, 0.2);
   --transparent-white: rgba(255, 255, 255, 0.5);
   --transparent-yellow-fluor: rgba(241, 255, 55, 0.5);
+  --transparent-frambuese: rgba(255, 56, 83, 0.5);
 
   /* Theme Variables */
   --text-primary: var(--dark);
   --text-secondary: var(--gray-dark);
-  --text-accent: var(--yellow-fluor);
+  --text-accent: var(--frambuese);
 
   --bg-primary: var(--white);
   --bg-secondary: var(--grey-light);
   --bg-accent: var(--light-yellow-fluor);
   --bg-transparent: var(--transparent-gray);
-  --bg-transparent-accent: var(--transparent-yellow-fluor);
+  --bg-transparent-accent: var(--transparent-frambuese);
 
   --gradient-primary: linear-gradient(
     90deg,
@@ -65,6 +66,7 @@
   --bg-secondary: var(--gray-dark);
   --bg-accent: var(--dark-yellow-fluor);
   --bg-transparent: var(--transparent-white);
+  --bg-transparent-accent: var(--transparent-yellow-fluor);
 
   --gradient-primary: linear-gradient(
     90deg,
@@ -75,7 +77,7 @@
   --gradient-secondary: linear-gradient(
     90deg,
     var(--black),
-    var(--dark-frambuese)
+    var(--bg-transparent-accent)
   );
 }
 

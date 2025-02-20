@@ -1,12 +1,11 @@
 import React from "react";
+import { H2 } from "./texts/H2";
 
 export const TrendingCollections = () => {
   return (
     <section className="mb-24">
       <div className="flex justify-between items-center mb-10">
-        <h2 className="text-4xl font-bold text-primary">
-          Trending Collections
-        </h2>
+        <H2>Trending Collections</H2>
         <a href="#" className="text-link font-medium">
           View All →
         </a>

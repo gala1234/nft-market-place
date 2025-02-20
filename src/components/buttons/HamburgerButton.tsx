@@ -12,7 +12,7 @@ export const HamburgerButton: React.FC<HamburgerButtonProps> = ({
   return (
     <button
       onClick={onClick}
-      className="md:hidden p-2 text-gray-600 dark:text-gray-300 hover:text-black dark:hover:text-white transition-colors"
+      className="md:hidden p-2 text-primary"
       aria-label={isOpen ? "Close menu" : "Open menu"}
     >
       <div className="w-6 h-6 relative">

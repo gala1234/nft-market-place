@@ -8,15 +8,13 @@ export const DesktopNavigation = () => {
   return (
     <div className="flex justify-between w-full px-4 ">
       <div className="flex items-center space-x-12">
-        <div className="text-2xl font-bold text-black dark:text-white">
-          NFT Market
-        </div>
+        <div className="text-2xl font-bold text-primary">NFT Market</div>
         <div className="flex space-x-8">
           {navigationLinks.map((link) => (
             <a
               key={link.label}
               href={link.href}
-              className="text-gray-600 dark:text-gray-300 hover:text-black dark:hover:text-white transition-colors font-medium"
+              className="text-link font-medium"
             >
               {link.label}
             </a>

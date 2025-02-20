@@ -20,8 +20,11 @@ export const MobileNavigation: React.FC<MobileNavigationProps> = ({
         isOpen ? "translate-x-0 h-screen" : "translate-x-full"
       } transition-transform duration-300 ease-in-out md:hidden`}
     >
-      <div className="fixed inset-0 bg-black bg-opacity-50" onClick={onClose} />
-      <div className="fixed right-0 top-0 h-full w-64 bg-white/90 dark:bg-gray-900/90 shadow-xl backdrop-blur-sm">
+      <div
+        className="fixed inset-0 bg-secondary bg-opacity-50"
+        onClick={onClose}
+      />
+      <div className="fixed right-0 top-0 h-full w-64 bg-primary shadow-xl backdrop-blur-sm">
         <div className="absolute top-4 right-4">
           <HamburgerButton isOpen={isOpen} onClick={onClose} />
         </div>
@@ -30,7 +33,7 @@ export const MobileNavigation: React.FC<MobileNavigationProps> = ({
             <a
               key={link.label}
               href={link.href}
-              className="py-3 text-gray-600 dark:text-gray-300 hover:text-black dark:hover:text-white transition-colors font-medium"
+              className="py-3 text-link font-medium"
             >
               {link.label}
             </a>

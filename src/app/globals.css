@@ -3,34 +3,43 @@
 /* 🎨 Color Palette */
 :root {
   /* Primary Colors */
-  --tuatara: #3a3936;
-  --foggy-gray: #d1d0bfff;
-  --cascade: #88a7ab;
-  --hoki: #638ba3;
-  --yellow-fluor: #dfff00;
-  --yellow-fluor-lighter: #ffff33;
-  --pink: #ffe5e5;
   --black: #000000;
   --white: #ffffff;
+  --dark: #191922;
+  --grey-medium: #767474;
+  --grey: #C1C2C3;
+  --yellow-fluor: #F1FF37;
+  --frambuese: #FF3853;
+  --spring-green: #38FF6D;
+  --pink: #FFC0CB;
+
+  /* Dark Mode Colors */
+  --gray-dark: #52525B;
+  --dark-yellow-fluor: #CFDE00;
+  --dark-frambuese: #C6717C;
+  --dark-spring-green: #00B22F;
+  --dark-pink: #ffc0cb;
+
+  /* Light Mode Colors */
+  --grey-light: #E2E4E0
+  --light-yellow-fluor: #F7FF8D;
+  --light-frambuese: #FFE3E6;
+  --light-spring-gree: #E3FFEA;
+  --light-pink: #FFEEF0;
+
 
   /* Transparent Colors */
   --transparent-gray: rgba(128, 128, 128, 0.2);
   --transparent-white: rgba(255, 255, 255, 0.5);
 
-  /* Dark Mode Colors */
-  --dark-tuatara: #222222;
-  --dark-foggy-gray: #444444;
-  --dark-yellow-fluor: #adff2f;
-  --dark-pink: #ffc0cb;
-
   /* Theme Variables */
-  --text-primary: var(--tuatara);
-  --text-secondary: var(--hoki);
-  --text-accent: var(--cascade);
+  --text-primary: var(--dark);
+  --text-secondary: var(--gray-dark);
+  --text-accent: var(--yellow-fluor);
 
-  --bg-primary: #ffffff;
-  --bg-secondary: var(--foggy-gray);
-  --bg-accent: var(--cascade);
+  --bg-primary: var(--white);
+  --bg-secondary: var(--grey-light);
+  --bg-accent: var(--light-yellow-fluor);
   --bg-transparent: var(--transparent-gray);
 
   --gradient-primary: linear-gradient(
@@ -41,19 +50,19 @@
   );
   --gradient-secondary: linear-gradient(
     90deg,
-    var(--foggy-gray),
-    var(--tuatara)
+    var(--grey-light),
+    var(--light-spring-gree)
   );
 }
 
 :root[class="dark"] {
-  --text-primary: var(--foggy-gray);
-  --text-secondary: var(--hoki);
-  --text-accent: var(--cascade);
+  --text-primary: var(--white);
+  --text-secondary: var(--grey-light);
+  --text-accent: var(--light-yellow-fluor);
 
-  --bg-primary: var(--tuatara);
-  --bg-secondary: #0a0a0aff;
-  --bg-accent: var(--hoki);
+  --bg-primary: var(--dark);
+  --bg-secondary: var(--gray-dark);
+  --bg-accent: var(--dark-yellow-fluor);
   --bg-transparent: var(--transparent-white);
 
   --gradient-primary: linear-gradient(
@@ -62,7 +71,7 @@
     var(--yellow-fluor),
     var(--white)
   );
-  --gradient-secondary: linear-gradient(90deg, var(--tuatara), var(--hoki));
+  --gradient-secondary: linear-gradient(90deg, var(--black), var(--gray-dark));
 }
 
 .text.primary {
@@ -71,7 +80,7 @@
 
 .link {
   @apply transition-colors duration-200;
-  color: var(--bg-primary);
+  color: var(--text-primary);
 }
 
 .link:hover {
@@ -90,7 +99,7 @@
 }
 
 .highlight-text:hover {
-  color: var(--yellow-fluor-lighter);
+  color: var(--light-yellow-fluor);
 }
 
 .highlight-bg {
@@ -99,7 +108,7 @@
 }
 
 .highlight-bg:hover {
-  background-color: var(--yellow-fluor-lighter);
+  background-color: var(--light-yellow-fluor);
 }
 
 .highlight-glow {
@@ -108,7 +117,7 @@
 }
 
 .highlight-glow:hover {
-  text-shadow: 0 0 12px var(--yellow-fluor-lighter);
+  text-shadow: 0 0 12px var(--light-yellow-fluor);
 }
 .bg-gradient-primary {
   background-image: var(--gradient-primary);

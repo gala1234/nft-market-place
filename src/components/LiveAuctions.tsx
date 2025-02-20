@@ -3,7 +3,7 @@ import { H2 } from "./texts/H2";
 
 export const LiveAuctions = () => {
   return (
-    <section className="mb-16">
+    <section className="mb-16 px-6">
       <H2>Live Auctions</H2>
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
         {[...Array(3)].map((_, i) => (

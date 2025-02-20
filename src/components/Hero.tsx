@@ -30,15 +30,15 @@ export const Hero = () => {
   return (
     <section className="relative min-h-[80vh] mb-24 overflow-hidden">
       {/* Mobile background image */}
-      <div className="md:hidden absolute inset-0 w-screen h-full overflow-hidden">
+      <div className="md:hidden absolute inset-0 w-screen h-screen left-0">
         <Image
-          src="/shapes.png"
+          src="/shapes.svg"
           alt="Shapes Background"
           layout="fill"
           objectFit="cover"
           quality={100}
           priority
-          className="w-full h-full object-cover scale-105"
+          className="absolute left-0 w-screen h-screen object-cover"
         />
       </div>
 
@@ -72,7 +72,7 @@ export const Hero = () => {
       </div>
 
       {/* Main content */}
-      <div className="relative z-10 max-w-[1248px] mx-auto rounded-2xl min-h-[80vh] p-12 sm:p-16">
+      <div className="relative z-10 max-w-[1248px] mx-auto rounded-2xl min-h-[80vh] p-6 sm:p-16">
         <div className="flex flex-col md:flex-row items-center justify-between gap-8 bg-transparent-secondary backdrop-blur-xl rounded-3xl ">
           {/* Text content */}
           <motion.div
@@ -118,7 +118,7 @@ export const Hero = () => {
           {/* Shapes image - visible only on desktop */}
           <div className="hidden md:block w-full md:w-1/2">
             <Image
-              src="/shapes.png"
+              src="/shapes.svg"
               alt="Shapes Background"
               width={500}
               height={500}

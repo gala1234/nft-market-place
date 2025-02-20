@@ -3,7 +3,7 @@ import { H2 } from "./texts/H2";
 
 export const TrendingCollections = () => {
   return (
-    <section className="mb-24">
+    <section className="mb-24 px-6">
       <div className="flex justify-between items-center mb-10">
         <H2>Trending Collections</H2>
         <a href="#" className="text-link font-medium">

@@ -2,6 +2,7 @@ import { Navigation } from "../components/navigation";
 import { Hero } from "../components/Hero";
 import { TrendingCollections } from "../components/TrendingCollections";
 import { LiveAuctions } from "../components/LiveAuctions";
+import { Footer } from "@/components/Footer";
 
 export default function Home() {
   return (
@@ -11,6 +12,7 @@ export default function Home() {
         <Hero />
         <TrendingCollections />
         <LiveAuctions />
+        <Footer />
       </div>
     </div>
   );

@@ -32,7 +32,7 @@ export const Hero = () => {
       {/* Mobile background image */}
       <div className="md:hidden absolute inset-0 w-screen h-screen left-0">
         <Image
-          src="/shapes.svg"
+          src="/shapes.png"
           alt="Shapes Background"
           layout="fill"
           objectFit="cover"
@@ -72,7 +72,7 @@ export const Hero = () => {
       </div>
 
       {/* Main content */}
-      <div className="relative z-10 max-w-[1248px] mx-auto rounded-2xl min-h-[80vh] p-6 sm:p-16">
+      <div className="relative z-10 max-w-[1248px] mx-auto rounded-2xl min-h-[80vh] p-6 sm:p-16 flex items-center">
         <div className="flex flex-col md:flex-row items-center justify-between gap-8 bg-transparent-secondary backdrop-blur-xl rounded-3xl ">
           {/* Text content */}
           <motion.div
@@ -118,7 +118,7 @@ export const Hero = () => {
           {/* Shapes image - visible only on desktop */}
           <div className="hidden md:block w-full md:w-1/2">
             <Image
-              src="/shapes.svg"
+              src="/shapes.png"
               alt="Shapes Background"
               width={500}
               height={500}

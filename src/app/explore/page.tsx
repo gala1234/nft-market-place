@@ -82,7 +82,7 @@ export default function ExplorePage() {
           {mockCollections.map((collection) => (
             <div
               key={collection.id}
-              className="bg-white dark:bg-gray-800 rounded-2xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300"
+              className="bg-secondary text-primary rounded-2xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300 border border-transparent dark:border-gray-800"
             >
               <div className="relative pb-[100%]">
                 <Image
@@ -99,10 +99,10 @@ export default function ExplorePage() {
                 </h3>
                 <p className="text-secondary mb-4">{collection.description}</p>
                 <div className="flex justify-between items-center">
-                  <span className="text-accent font-bold">
+                  <span className="text-primary font-bold">
                     {collection.price}
                   </span>
-                  <span className="text-link">{collection.creator}</span>
+                  <span className="text-secondary">{collection.creator}</span>
                 </div>
               </div>
             </div>

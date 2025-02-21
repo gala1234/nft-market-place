@@ -13,7 +13,7 @@ export const ActionButton: React.FC<ActionButtonProps> = ({
 }) => {
   return (
     <button
-      className={`w-full py-2 px-4 bg-accent text-white rounded-lg font-medium hover:bg-accent/90 transition-colors ${className}`}
+      className={`w-full py-2 px-4 bg-accent text-primary font-medium rounded-lg hover:bg-accent/90 dark:bg-accent dark:text-white dark:hover:bg-accent/80 transition-colors ${className}`}
       onClick={onClick}
     >
       {label}

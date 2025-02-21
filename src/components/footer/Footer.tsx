@@ -2,7 +2,7 @@
 
 import React from "react";
 import Link from "next/link";
-import Image from "next/image";
+import { SocialButton } from "@/components/buttons";
 import { footerLinks, socialLinks } from "@/constants/footerLinks";
 
 export const Footer = () => {
@@ -21,21 +21,12 @@ export const Footer = () => {
             </p>
             <div className="flex space-x-4">
               {socialLinks.map((social) => (
-                <a
+                <SocialButton
                   key={social.name}
-                  href={social.href}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-link"
-                  aria-label={social.name}
-                >
-                  <Image
-                    src={social.icon}
-                    alt={social.name}
-                    width={24}
-                    height={24}
-                  />
-                </a>
+                  platform={social.name}
+                  {...social}
+                  className="text-sm bg-transparent-accent hover:bg-accent hover:text-white transition-all duration-300 px-4 py-2 rounded-full"
+                />
               ))}
             </div>
           </div>

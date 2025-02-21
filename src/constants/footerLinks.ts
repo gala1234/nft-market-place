@@ -23,5 +23,4 @@ export const footerLinks = [
 export const socialLinks = [
   { name: "Twitter", icon: "/twitter.svg", href: "https://twitter.com" },
   { name: "Discord", icon: "/discord.svg", href: "https://discord.com" },
-  { name: "Instagram", icon: "/instagram.svg", href: "https://instagram.com" },
 ];

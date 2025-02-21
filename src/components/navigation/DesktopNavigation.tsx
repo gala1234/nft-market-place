@@ -1,6 +1,6 @@
 import React from "react";
 import Link from "next/link";
-import { navigationLinks } from "./constants";
+import { navigationLinks } from "../../constants/navLinks";
 import { SearchBar } from "../SearchBar";
 import { ButtonSmall } from "../buttons/ButtonSmall";
 import { ThemeToggle } from "../buttons/ThemeToggle";

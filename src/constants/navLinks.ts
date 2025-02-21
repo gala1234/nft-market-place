@@ -1,10 +1,10 @@
 export const navigationLinks = [
   {
     label: "Explore",
-    href: "#",
+    href: "/explore",
   },
   {
     label: "Sell",
-    href: "#",
+    href: "/sell",
   },
 ];

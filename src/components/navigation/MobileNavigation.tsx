@@ -1,5 +1,5 @@
 import React from "react";
-import { navigationLinks } from "./constants";
+import { navigationLinks } from "../../constants/navLinks";
 import { SearchBar } from "../SearchBar";
 import { ButtonSmall } from "../buttons/ButtonSmall";
 import { HamburgerButton } from "../buttons/HamburgerButton";

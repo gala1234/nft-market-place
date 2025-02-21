@@ -3,49 +3,10 @@
 import React from "react";
 import Link from "next/link";
 import Image from "next/image";
+import { footerLinks, socialLinks } from "@/constants/footerLinks";
 
 export const Footer = () => {
   const currentYear = new Date().getFullYear();
-
-  const footerLinks = [
-    {
-      title: "Marketplace",
-      links: [
-        { name: "Explore", href: "/explore" },
-        { name: "NFTs", href: "/nfts" },
-        { name: "Collectibles", href: "/collectibles" },
-        { name: "Virtual Worlds", href: "/virtual-worlds" },
-      ],
-    },
-    {
-      title: "Resources",
-      links: [
-        { name: "Help Center", href: "/help" },
-        { name: "Partners", href: "/partners" },
-        { name: "Blog", href: "/blog" },
-        { name: "Newsletter", href: "/newsletter" },
-      ],
-    },
-    {
-      title: "Company",
-      links: [
-        { name: "About Us", href: "/about" },
-        { name: "Careers", href: "/careers" },
-        { name: "Support", href: "/support" },
-        { name: "Terms of Service", href: "/terms" },
-      ],
-    },
-  ];
-
-  const socialLinks = [
-    { name: "Twitter", icon: "/twitter.svg", href: "https://twitter.com" },
-    { name: "Discord", icon: "/discord.svg", href: "https://discord.com" },
-    {
-      name: "Instagram",
-      icon: "/instagram.svg",
-      href: "https://instagram.com",
-    },
-  ];
 
   return (
     <footer className="bg-transparent-secondary backdrop-blur-xl border-t border-gray-100 dark:border-gray-800">

@@ -1,5 +1,3 @@
-"use client";
-
 import React from "react";
 import Image from "next/image";
 import { H2, P } from "@/components/texts";
@@ -51,9 +49,13 @@ const mockNFTDetails: NFTDetails = {
   ],
 };
 
-export default function NFTDetailsPage({ params }: { params: { id: string } }) {
-  // In a real application, you would fetch the NFT details using the ID
-  console.log("NFT ID:", params.id);
+export default async function NFTDetailsPage({
+  params,
+}: {
+  params: Promise<{ id: string }>;
+}) {
+  const id = (await params).id;
+  console.log("NFT ID:", id);
 
   return (
     <div className="min-h-screen pt-20 pb-12 px-4">

@@ -17,8 +17,9 @@ export default function NotFound() {
         </div>
         <H1>Page Not Found</H1>
         <P>
-          Oops! The NFT you're looking for seems to have wandered into the digital void.
-          Don't worry, there are plenty more unique pieces to discover!
+          Oops! The NFT you&apos;re looking for seems to have wandered into the
+          digital void. Don&apos;t worry, there are plenty more unique pieces to
+          discover!
         </P>
         <Link
           href="/"

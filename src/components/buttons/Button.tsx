@@ -16,10 +16,10 @@ export const Button: React.FC<ButtonProps> = ({
   className = "",
 }) => {
   const baseStyles =
-    "px-10 py-4 rounded-2xl font-bold text-lg transition-all duration-300 hover:opacity-80 cursor-pointer";
+    "px-10 py-4 rounded-2xl font-bold text-lg transition-all duration-300 cursor-pointer";
 
   const variantStyles = {
-    primary: "bg-accent text-primary",
+    primary: "bg-accent text-primary hover:opacity-80 ",
     secondary: "bg-primary text-link",
   };
 

@@ -48,9 +48,9 @@
 
   --gradient-primary: linear-gradient(
     90deg,
-    var(--dark-frambuese),
+    var(--frambuese),
     var(--yellow-fluor),
-    var(--dark-frambuese)
+    var(--frambuese)
   );
   --gradient-secondary: linear-gradient(
     90deg,

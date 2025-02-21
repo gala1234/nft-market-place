@@ -1,4 +1,5 @@
 import React from "react";
+import Link from "next/link";
 import { navigationLinks } from "./constants";
 import { SearchBar } from "../SearchBar";
 import { ButtonSmall } from "../buttons/ButtonSmall";
@@ -8,7 +9,9 @@ export const DesktopNavigation = () => {
   return (
     <div className="flex justify-between w-full">
       <div className="flex items-center space-x-12">
-        <div className="text-2xl font-bold text-primary">NFT Market</div>
+        <Link href={"/"} className="text-2xl font-bold text-primary">
+          NFT Market
+        </Link>
         <div className="flex space-x-8">
           {navigationLinks.map((link) => (
             <a

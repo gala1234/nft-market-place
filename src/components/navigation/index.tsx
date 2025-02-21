@@ -1,5 +1,6 @@
 "use client";
 import React, { useState, useEffect } from "react";
+import Link from "next/link";
 import { DesktopNavigation } from "./DesktopNavigation";
 import { MobileNavigation } from "./MobileNavigation";
 import { HamburgerButton } from "../buttons/HamburgerButton";
@@ -26,9 +27,12 @@ export const Navigation = () => {
       <div className="max-w-[1248px] mx-auto flex justify-between items-center">
         {isMobile ? (
           <div className="flex justify-between items-center w-full px-4">
-            <div className="text-2xl font-bold text-black dark:text-white">
+            <Link
+              href="/"
+              className="text-2xl font-bold text-black dark:text-white"
+            >
               NFT Market
-            </div>
+            </Link>
             <HamburgerButton
               isOpen={isMobileMenuOpen}
               onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}

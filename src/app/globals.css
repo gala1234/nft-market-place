@@ -49,13 +49,21 @@
   --gradient-primary: linear-gradient(
     90deg,
     var(--frambuese),
+    var(--dark),
     var(--yellow-fluor),
+    var(--dark),
     var(--frambuese)
   );
   --gradient-secondary: linear-gradient(
     90deg,
-    var(--grey-light),
-    var(--light-spring-green)
+    var(--light-spring-green),
+    var(--transparent-white)
+  );
+
+  --gradient-tertiary: linear-gradient(
+    90deg,
+    var(--transparent-white),
+    var(--transparent-frambuese)
   );
 }
 
@@ -79,8 +87,14 @@
   );
   --gradient-secondary: linear-gradient(
     90deg,
-    var(--black),
+    var(--transparent-white),
     var(--bg-transparent-accent)
+  );
+
+  --gradient-tertiary: linear-gradient(
+    90deg,
+    var(--transparent-white),
+    var(--transparent-frambuese)
   );
 }
 
@@ -143,6 +157,10 @@
 
 .bg-gradient-secondary {
   background-image: var(--gradient-secondary);
+}
+
+.bg-gradient-tertiary {
+  background-image: var(--gradient-tertiary);
 }
 
 /* Utility Classes */

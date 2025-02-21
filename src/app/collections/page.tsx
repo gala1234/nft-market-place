@@ -5,7 +5,7 @@ import { CollectibleCard } from "@/components/cards/CollectibleCard";
 
 export default function CollectionsPage() {
   return (
-    <div className="max-w-[1248px] mx-auto px-6 py-24">
+    <div className="max-w-[1248px] mx-auto px-4 md:px-0 py-16">
       <div className="mb-10">
         <H1>Your NFT Collections</H1>
         <P>Discover and manage your unique digital collectibles</P>

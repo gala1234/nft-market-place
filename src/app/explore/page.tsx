@@ -47,7 +47,7 @@ export default function ExplorePage() {
   console.log({ searchQuery });
 
   return (
-    <main className="min-h-screen pt-24 px-6">
+    <main className="min-h-screen py-16 px-4 md:px-0">
       <div className="max-w-[1248px] mx-auto">
         <div className="mb-8">
           <H1>Explore Collections</H1>

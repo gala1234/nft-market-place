@@ -5,8 +5,8 @@ import { TrendingCollectionCard } from "./cards/TrendingCollectionCard";
 
 export const TrendingCollections = () => {
   return (
-    <section className="mb-24 px-6">
-      <div className="flex justify-between items-center mb-10">
+    <section className="mb-24 p-4 md:p-0">
+      <div className="flex flex-col md:flex-row md:justify-between md:items-center mb-10">
         <H2>Trending Collections</H2>
         <ArrowButton href="/collections" text="View All" />
       </div>

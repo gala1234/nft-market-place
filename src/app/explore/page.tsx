@@ -2,6 +2,7 @@
 
 import React, { useState } from "react";
 import Image from "next/image";
+import { P, H1 } from "@/components/texts";
 import { SearchBar } from "@/components/SearchBar";
 
 interface NFTCollection {
@@ -49,13 +50,11 @@ export default function ExplorePage() {
     <main className="min-h-screen pt-24 px-6">
       <div className="max-w-[1248px] mx-auto">
         <div className="mb-8">
-          <h1 className="text-4xl font-bold text-primary mb-4">
-            Explore Collections
-          </h1>
-          <p className="text-secondary">
+          <H1>Explore Collections</H1>
+          <P>
             Discover unique NFT collections from talented artists around the
-            world
-          </p>
+            world.
+          </P>
         </div>
 
         <div className="flex flex-col md:flex-row justify-between items-start md:items-center gap-4 mb-8">

@@ -109,8 +109,22 @@ export const Hero = () => {
                 non-fungible tokens
               </p>
               <div className="flex flex-wrap gap-6">
-                <Button variant="primary">Start Exploring</Button>
-                <Button variant="secondary">Create NFT</Button>
+                <Button
+                  variant="primary"
+                  onClick={() =>
+                    window.open("/explore", "_self", "noopener,noreferrer")
+                  }
+                >
+                  Start Exploring
+                </Button>
+                <Button
+                  variant="secondary"
+                  onClick={() =>
+                    window.open("/sell", "_self", "noopener,noreferrer")
+                  }
+                >
+                  Create NFT
+                </Button>
               </div>
             </div>
           </motion.div>

@@ -1,5 +1,6 @@
 import React from "react";
 import Image from "next/image";
+import { ActionButton } from "@/components/buttons/ActionButton";
 
 interface CardProps {
   image?: string;
@@ -79,12 +80,10 @@ export const CollectibleCard: React.FC<CardProps> = ({
         )}
 
         {actionLabel && (
-          <button
-            className="w-full py-2 px-4 bg-accent text-white rounded-lg font-medium hover:bg-accent/90 transition-colors"
+          <ActionButton
+            label={actionLabel}
             onClick={onAction}
-          >
-            {actionLabel}
-          </button>
+          />
         )}
       </div>
     </div>

@@ -1,16 +1,14 @@
 "use client";
 import React from "react";
-import { H2 } from "@/components/texts/H2";
+import { H1, P } from "@/components/texts";
 import { CollectibleCard } from "@/components/cards/CollectibleCard";
 
-export default function CollectiblesPage() {
+export default function CollectionsPage() {
   return (
     <div className="max-w-[1248px] mx-auto px-6 py-24">
       <div className="mb-10">
-        <H2>Your NFT Collections</H2>
-        <p className="text-secondary mt-2">
-          Discover and manage your unique digital collectibles
-        </p>
+        <H1>Your NFT Collections</H1>
+        <P>Discover and manage your unique digital collectibles</P>
       </div>
 
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">

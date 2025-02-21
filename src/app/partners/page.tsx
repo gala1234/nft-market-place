@@ -1,6 +1,6 @@
 "use client";
 import React from "react";
-import { H2 } from "@/components/texts/H2";
+import { H2, P } from "@/components/texts";
 import { CollectibleCard } from "@/components/cards/CollectibleCard";
 
 interface Partner {
@@ -71,10 +71,10 @@ export default function PartnersPage() {
     <div className="max-w-[1248px] mx-auto px-6 py-24">
       <div className="mb-12">
         <H2>Our Partners</H2>
-        <p className="text-secondary mt-2">
+        <P>
           Collaborating with industry leaders to bring you the best NFT
           experience
-        </p>
+        </P>
       </div>
 
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">

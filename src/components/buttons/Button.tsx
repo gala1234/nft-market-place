@@ -15,7 +15,7 @@ export const Button: React.FC<ButtonProps> = ({
   onClick,
   className = "",
 }) => {
-  const baseStyles = "px-10 py-4 rounded-2xl font-bold text-lg";
+  const baseStyles = "px-10 py-4 rounded-2xl font-bold text-lg transition-all duration-300 hover:scale-105 hover:opacity-90";
   
   const variantStyles = {
     primary: "bg-accent text-primary",

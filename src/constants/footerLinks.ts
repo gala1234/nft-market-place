@@ -4,7 +4,7 @@ export const footerLinks = [
     links: [
       { name: "Explore", href: "/explore" },
       { name: "Sell", href: "/sell" },
-      { name: "Collectibles", href: "/collectibles" },
+      { name: "Collections", href: "/collections" },
     ],
   },
   {

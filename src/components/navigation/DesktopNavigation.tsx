@@ -6,7 +6,7 @@ import { ThemeToggle } from "../buttons/ThemeToggle";
 
 export const DesktopNavigation = () => {
   return (
-    <div className="flex justify-between w-full px-4 ">
+    <div className="flex justify-between w-full">
       <div className="flex items-center space-x-12">
         <div className="text-2xl font-bold text-primary">NFT Market</div>
         <div className="flex space-x-8">

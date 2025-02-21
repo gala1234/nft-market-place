@@ -23,7 +23,7 @@ export const Navigation = () => {
 
   return (
     <nav className="fixed top-0 left-0 right-0 z-[100] bg-white/55 dark:bg-black/55 backdrop-blur-md py-4 border-b border-gray-100 dark:border-gray-800">
-      <div className="max-w-[1248px] mx-auto px-4 flex justify-between items-center">
+      <div className="max-w-[1248px] mx-auto flex justify-between items-center">
         {isMobile ? (
           <div className="flex justify-between items-center w-full px-4">
             <div className="text-2xl font-bold text-black dark:text-white">
